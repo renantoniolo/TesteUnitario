@@ -12,26 +12,29 @@ namespace TesteUnitarioProjeto
         [Test()]
         public void Test_Retorno_Nome_nao_Vazio_ou_nulo()
         {
-            CadastroClienteViewModel cadastro;
+            // Arrange
+            CadastroClienteViewModel cadastro = new CadastroClienteViewModel();
 
-            cadastro = new CadastroClienteViewModel();
-
+            // Act
             Cliente cliente = cadastro.RetornaNomeSobrenome();
 
+            // Assert
             Assert.IsNotNullOrEmpty(cliente.Nome);
         }
 
         [Test()]
         public void Test_Retorno_Nome_igual_Renan()
         {
-            CadastroClienteViewModel cadastro;
-            Cliente cliente = new Cliente();
 
+            // Arrange
+            CadastroClienteViewModel cadastro = new CadastroClienteViewModel();
+            Cliente cliente = new Cliente();
             cliente.Nome = "Renan";
 
-            cadastro = new CadastroClienteViewModel();
+            // Act
             Cliente nomeSobrenome = cadastro.RetornaNomeSobrenome();
 
+            // Assert
             Assert.AreSame(nomeSobrenome.Nome,cliente.Nome);
         }
 
