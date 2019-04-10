@@ -1,4 +1,5 @@
 ﻿using System;
+using TesteUnitario.View;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -11,7 +12,7 @@ namespace TesteUnitario
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new CadastroCliente();
         }
 
         protected override void OnStart()

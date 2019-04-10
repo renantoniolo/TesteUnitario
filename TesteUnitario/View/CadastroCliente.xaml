@@ -3,8 +3,24 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="TesteUnitario.View.CadastroCliente">
     <ContentPage.Content>
-        <StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
             
-        </StackLayout>
+            <Label 
+                Margin="10" 
+                Text="CADASTRO DE CLIENTE" 
+                TextColor="Gray"
+                FontSize="Large"
+                FontAttributes="Bold"
+                HorizontalTextAlignment="Center" />
+            
+            <StackLayout Grid.Row="1" Margin="10">
+                <Label Text="Nome do Cliente" TextColor="Gray" FontSize="Small" Margin="0" />
+                <Entry HorizontalOptions="FillAndExpand" Placeholder="Nome Cliente" />
+            </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
